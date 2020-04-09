@@ -17,7 +17,7 @@ The project is a cinemax reservation system that allows the user to choose movie
 
 ## Meta
 
-Jerico Navarro – [@YourTwitter](https://twitter.com/jeco_error) – jericoxnavarro16@gmail.com
+Jerico Navarro – [@jeco_error](https://twitter.com/jeco_error) – jericoxnavarro16@gmail.com
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
