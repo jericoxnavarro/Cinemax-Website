@@ -8,7 +8,7 @@
 This project is made for my project in my programming class.
 The project is a cinemax reservation system that allows the user to choose movie, date, time and seat that he/she wants. 
 
-![](images/use_for_readme.jpeg)
+![image](image)
 
 ## Release History
 
@@ -38,3 +38,4 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
+[image]: images/use_for_readme.jpeg
