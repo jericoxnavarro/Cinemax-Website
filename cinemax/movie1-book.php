@@ -31,10 +31,7 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-  <script>
-    let btn = document.querySelector('#A1');
-    btn.addEventListener('click', () => btn.style.backgroundColor='#5ef891');
-</script>
+
 </head>
 <body>
   <div class="section-6">
@@ -56,7 +53,7 @@
         </div>
       </div>
     </div>
-
+    
     <?php
       $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
       $movie1_result = mysqli_query($conn, $movie1_queery);
@@ -201,17 +198,41 @@
         <div data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
           <div class="tabs-menu-3 w-tab-menu">
             <a onclick="changeseat(this.id)" id="date1" data-w-tab="Tab 1" class="tablink w-inline-block w-tab-link">
+            <script>
+              document.getElementById("date1").addEventListener("click", () => {
+                console.log("<?php echo implode(",",$Date1); ?>"); 
+                <?php 
+                $ClickedDate = implode(",",$Date1);
+                ?>
+              });
+            </script>
               <div class="month btn1"><?php echo $Month1; ?></div>
               <div class="day btn1"><?php echo $Day1; ?></div>
               <div class="days btn1"><?php echo $Year1; ?></div>
             </a>
             <a onclick="changeseat(this.id)" id="date2" data-w-tab="Tab 2" class="tablink w-inline-block w-tab-link">
+            <script>
+              document.getElementById("date2").addEventListener("click", () => {
+                console.log("<?php echo implode(",",$Date2); ?>");
+                <?php 
+                $ClickedDate = implode(",",$Date2);
+                ?>
+              });
+            </script>
               <div class="month btn2"><?php echo $Month2; ?></div>
               <div class="day btn2"><?php echo $Day2; ?></div>
               <div class="days btn2"><?php echo $Year2; ?></div>
             </a>
             <a onclick="changeseat(this.id)" id="date3" data-w-tab="Tab 3" class="tablink w-inline-block w-tab-link w--current">
-              <div class="month btn3"><?php echo $Month3; ?></div>
+            <script>
+              document.getElementById("date3").addEventListener("click", () => {
+                console.log("<?php echo implode(",",$Date3); ?>");
+                <?php 
+                $ClickedDate = implode(",",$Date3);
+                ?>
+              });
+            </script>  
+            <div class="month btn3"><?php echo $Month3; ?></div>
               <div class="day btn3"><?php echo $Day3; ?></div>
               <div class="days btn3"><?php echo $Year3; ?></div>
             </a>
@@ -221,15 +242,39 @@
               <div data-duration-in="300" data-duration-out="100" class="tabs-2 w-tabs">
                 <div class="tabs-menu-4 w-tab-menu">
                   <a onclick="changeseat(this.id)" id="time1-date1" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link">
-                    <div class="time">9:30</div>
+                  <script>
+                    document.getElementById("time1-date1").addEventListener("click", () => {
+                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "9:30 AM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time2-date1" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
-                    <div class="time">12:30</div>
+                  <script>
+                    document.getElementById("time2-date1").addEventListener("click", () => {
+                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "12:30 PM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time3-date1" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link w--current">
-                    <div class="time">3:30</div>
+                  <script>
+                    document.getElementById("time3-date1").addEventListener("click", () => {
+                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "3:30 PM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
                 </div>
@@ -399,23 +444,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                          <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-9" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required=""><label for="name-10" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-10" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -583,23 +623,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-10" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-10" data-name="Name 10" placeholder="Jerico Navarro" id="name-10" required=""><label for="name-11" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-11" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -767,23 +802,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-11" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-11" data-name="Name 11" placeholder="Jerico Navarro" id="name-11" required=""><label for="name-12" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-12" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -796,14 +826,38 @@
               <div data-duration-in="300" data-duration-out="100" class="tabs-2 w-tabs">
                 <div class="tabs-menu-4 w-tab-menu">
                   <a onclick="changeseat(this.id)" id="time1-date2" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link w--current">
-                    <div class="time">9:30</div>
+                  <script>
+                    document.getElementById("time1-date2").addEventListener("click", () => {
+                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "9:30 AM";
+                      ?>
+                    });
+                  </script>  
+                  <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time2-date2" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
-                    <div class="time">12:30</div>
+                  <script>
+                    document.getElementById("time2-date2").addEventListener("click", () => {
+                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "12:30 PM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time3-date2" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link">
+                  <script>
+                    document.getElementById("time3-date2").addEventListener("click", () => {
+                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "3:30 PM";
+                      ?>
+                    });
+                  </script>  
                     <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
@@ -971,23 +1025,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-6" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-6" data-name="Name 6" placeholder="Jerico Navarro" id="name-6" required=""><label for="name-7" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-7" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1155,23 +1204,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-7" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-7" data-name="Name 7" placeholder="Jerico Navarro" id="name-7" required=""><label for="name-8" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-8" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1339,23 +1383,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-8" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-8" data-name="Name 8" placeholder="Jerico Navarro" id="name-8" required=""><label for="name-9" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-9" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1368,15 +1407,39 @@
               <div data-duration-in="300" data-duration-out="100" class="tabs-2 w-tabs">
                 <div class="tabs-menu-4 w-tab-menu">
                   <a onclick="changeseat(this.id)" id="time1-date3" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link">
-                    <div class="time">9:30</div>
+                  <script>
+                    document.getElementById("time1-date3").addEventListener("click", () => {
+                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "9:30 AM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
-                  <a onclick="changeseat(this.id)" id="time2-date3" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
-                    <div class="time">12:30</div>
+                  <a onclick="changeseat(this.id);" id="time2-date3" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
+                  <script>
+                    document.getElementById("time2-date3").addEventListener("click", () => {
+                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "12:30 PM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
-                  <a onclick="changeseat(this.id)" id="time3-date3" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link w--current">
-                    <div class="time">3:30</div>
+                  <a onclick="changeseat(this.id);" id="time3-date3" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link w--current">
+                  <script>
+                    document.getElementById("time3-date3").addEventListener("click", () => {
+                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      <?php 
+                      $ClickedTime = "3:30 PM";
+                      ?>
+                    });
+                  </script>    
+                  <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
                 </div>
@@ -1543,23 +1606,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-5" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-5" data-name="Name 5" placeholder="Jerico Navarro" id="name-5" required=""><label for="name-6" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-6" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1727,23 +1785,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name-4" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-4" data-name="Name 4" placeholder="Jerico Navarro" id="name-4" required=""><label for="name-5" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-5" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required=""><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1764,7 +1817,7 @@
                           </div>
                           <div class="seat-wrap">
                             <h1 id="seat-text" class="heading-7">Select your seat</h1>
-                            <div class="div-block-22">
+                            <div class="div-block-22"">
                               <img onclick="changeseat(this.id)" src="images/Path-34_1Path-34.png" width="19" id="A1" alt="" class="perseats A1">
                               <img onclick="changeseat(this.id)" src="images/Path-34_1Path-34.png" width="19" id="A2" alt="" class="perseats A2">
                               <img onclick="changeseat(this.id)" src="images/Path-34_1Path-34.png" width="19" id="A3" alt="" class="perseats A3">
@@ -1911,26 +1964,18 @@
                           </div>
                         </div>
                         <div class="div-block-32">
-                          <h1 class="heading-13">Card Details</h1>
-                          <div class="div-block-33">
-                            <div class="div-block-34"></div>
-                            <h1 class="heading-14">**** **** **** 9732</h1>
-                            <div class="div-block-35">
-                              <h1 class="name">Jerico Navarro</h1>
-                              <h1 class="heading-15">23/02</h1>
-                            </div>
-                          </div>
+                        <h1 class="heading-13">Customer Details</h1>
+                          
                           <div class="w-form">
-                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3"><label for="name" class="field-label-3">Name</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name" data-name="Name" placeholder="Jerico Navarro" id="name" required=""><label for="name-4" class="field-label-3">Card Number</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="****  ****  ****  9732" id="name-3" required=""><label for="name-4" class="field-label-3">Expiration Date</label><input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="23/03" id="name-2" required="">
-                              <div class="div-block-36">
-                                <div></div>
-                              </div><input type="submit" value="Check Out" data-wait="Please wait..." class="submit-button-2 w-button"></form>
-                            <div class="w-form-done">
-                              <div>Thank you! Your submission has been received!</div>
-                            </div>
-                            <div class="w-form-fail">
-                              <div>Oops! Something went wrong while submitting the form.</div>
-                            </div>
+                            <form id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                              <label for="name-9" class="field-label-3">Name</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-9" data-name="Name 9" placeholder="Jerico Navarro" id="name-9" required="">
+                              <label for="name-10" class="field-label-3">Phone Number</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="09*********" id="name-3" required="">
+                              <label for="name-10" class="field-label-3">Email</label>
+                              <input type="text" class="text-field-3 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="example@gmail.com" id="name-2" required="">
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -1945,7 +1990,81 @@
     </div>
   </div>
   <div class="section-7"></div>
-  <script src="js/seats.js" type="text/javascript"></script>
+  <script>
+    var ClickedSeat = "";
+function changeseat(clicked_id) {
+    var hh = clicked_id;
+    ClickedSeat = hh+"";
+    console.log(ClickedSeat);
+    var elems1 = document.getElementsByClassName("heading-7");
+        for (var x = 0; x < elems1.length; x+= 1) {
+            var selected = hh + " Seat is selected";
+            var clear = "Select your seat";
+            if (hh=="date1"||hh=="date2"||hh=="date3"
+                ||hh=="time1-date3"||hh=="time2-date3"||hh=="time3-date3"
+                ||hh=="time1-date2"||hh=="time2-date2"||hh=="time3-date2"
+                ||hh=="time1-date1"||hh=="time2-date1"||hh=="time3-date1") {
+                elems1[x].innerHTML = clear;
+            }else{
+                elems1[x].innerHTML = selected;
+            }
+        }
+    for(var i = 0;i <= 16;i++){
+        var seat = "perseats A" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 18;i++){
+        var seat = "perseats B" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 19;i++){
+        var seat = "perseats C" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 20;i++){
+        var seat = "perseats D" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 20;i++){
+        var seat = "perseats E" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 19;i++){
+        var seat = "perseats F" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    for(var i = 0;i <= 17;i++){
+        var seat = "perseats G" + i;
+        var elems = document.getElementsByClassName(seat);
+        for (var x = 0; x < elems.length; x+= 1) {
+            elems[x].src = "images/Path-34_1Path-34.png";
+        }
+    }
+    var perseats = "perseats " + hh;
+    var elems = document.getElementsByClassName(perseats);
+    for (var x = 0; x < elems.length; x+= 1) {
+        elems[x].src = "images/Path-36_1Path-36.png";
+    }
+}
+  </script>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e7092bf421073025be60948" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
