@@ -8,7 +8,7 @@
 <html data-wf-page="5e7092bf4210735ed2e6094a" data-wf-site="5e7092bf421073025be60948">
 <head>
   <meta charset="utf-8">
-  <title>Movies</title>
+  <title>Upcoming Movies</title>
   <meta content="Movies" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -48,53 +48,53 @@
       </div>
       <div class="container-5 w-container">
         <div class="div-block-8">
-          <h1 class="heading-3">NOW SHOWING</h1>
+          <h1 class="heading-3">UPCOMING MOVIES</h1>
           <div class="columns-2 w-row">
           <?php
-            $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
+            $movie1_queery = "SELECT * FROM upcoming_movies WHERE movie_id = 1";
             $movie1_result = mysqli_query($conn, $movie1_queery);
  
             while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
-            $Thumbnail[] = $movie1_rows['Thumbnail'];
+            $Thumbnail[] = $movie1_rows['thumbnail'];
           ?>
             <div class="column w-col w-col-4">
               <div class="movie-image mov mov1">
                 <img src="<?php echo implode(",",$Thumbnail); ?>" 
                  sizes="283.328125px" alt="" class="movie1-showing-pic">
-                <a href="movie1.php" class="link-block mov1 w-inline-block"></a>
+                <a href="upcoming_movie1.php" class="link-block mov1 w-inline-block"></a>
               </div>
             </div>
           <?php
             }
           ?>
           <?php
-            $movie2_queery = "SELECT * FROM movies WHERE Movie_ID = 2";
+            $movie2_queery = "SELECT * FROM upcoming_movies WHERE movie_id = 2";
             $movie2_result = mysqli_query($conn, $movie2_queery);
  
             while($movie2_rows = mysqli_fetch_assoc($movie2_result)){
-            $Thumbnail1[] = $movie2_rows['Thumbnail'];
+            $Thumbnail1[] = $movie2_rows['thumbnail'];
           ?>
             <div class="column w-col w-col-4">
               <div class="movie-image mov mov2">
                 <img src="<?php echo implode(",",$Thumbnail1); ?>" 
                  sizes="283.328125px" alt="" class="movie2-showing-pic">
-                <a href="movie2.php" class="link-block mov2 w-inline-block"></a>
+                <a href="upcoming_movie2.php" class="link-block mov2 w-inline-block"></a>
               </div>
             </div>
           <?php
             }
           ?>
           <?php
-            $movie3_queery = "SELECT * FROM movies WHERE Movie_ID = 3";
+            $movie3_queery = "SELECT * FROM upcoming_movies WHERE movie_id = 3";
             $movie3_result = mysqli_query($conn, $movie3_queery);
  
             while($movie3_rows = mysqli_fetch_assoc($movie3_result)){
-            $Thumbnail2[] = $movie3_rows['Thumbnail'];
+            $Thumbnail2[] = $movie3_rows['thumbnail'];
           ?>
             <div class="column w-col w-col-4">
               <div class="movie-image mov mov3">
                 <img src="<?php echo implode(",",$Thumbnail2); ?>" alt="" class="movie3-showing-pic">
-                <a href="movie3.php" class="link-block mov3 w-inline-block"></a>
+                <a href="upcoming_movie3.php" class="link-block mov3 w-inline-block"></a>
               </div>
           <?php
             }

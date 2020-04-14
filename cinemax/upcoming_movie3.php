@@ -9,10 +9,10 @@
 <head>
   <meta charset="utf-8">
   <?php
-    $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
+    $movie1_queery = "SELECT * FROM upcoming_movies WHERE movie_id = 3";
     $movie1_result = mysqli_query($conn, $movie1_queery);
     while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
-      $Titles[] = $movie1_rows['Title'];
+      $Titles[] = $movie1_rows['title'];
 
   ?>
   <title><?php echo implode(",",$Titles); ?></title>
@@ -54,19 +54,19 @@
     </div>
 
     <?php
-      $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
+      $movie1_queery = "SELECT * FROM upcoming_movies WHERE movie_id = 3";
       $movie1_result = mysqli_query($conn, $movie1_queery);
  
       while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
-        $Title[] = $movie1_rows['Title'];
-        $Genre1[] = $movie1_rows['Genre1'];
-        $Genre2[] = $movie1_rows['Genre2'];
-        $Genre3[] = $movie1_rows['Genre3'];
-        $Description[] = $movie1_rows['Description'];
-        $Ratings[] = $movie1_rows['Ratings'];
-        $BG_image[] = $movie1_rows['BG_image'];
-        $Thumbnail[] = $movie1_rows['Thumbnail'];
-        $Trailer[] = $movie1_rows['Trailer'];
+        $Title[] = $movie1_rows['title'];
+        $Genre1[] = $movie1_rows['genre1'];
+        $Genre2[] = $movie1_rows['genre2'];
+        $Genre3[] = $movie1_rows['genre3'];
+        $Description[] = $movie1_rows['description'];
+        $Ratings[] = $movie1_rows['ratings'];
+        $BG_image[] = $movie1_rows['bg_image'];
+        $Thumbnail[] = $movie1_rows['thumbnail'];
+        $Trailer[] = $movie1_rows['trailer'];
     ?>
     <style type="text/css" media="screen">
       .main-block.movie1 {
@@ -108,9 +108,9 @@
                   <a href="#" class="btn-genre gen-3 w-button"><?php echo implode(",",$Genre3); ?></a>
                 </div>
                 <p class="movie-des"><?php echo implode(",",$Description); ?></p>
-                <div class="div-book"><a href="movie1-book.html" class="button w-button">Book Now!</a>
-                  <h5 class="imbd-rating-h5">IMDb Ratings</h5>
+                <div class="div-book">
                   <h1 class="rating"><?php echo implode(",",$Ratings); ?></h1><img src="images/star_48px_1star_48px.png" width="34" alt="">
+                  <h5 class="imbd-rating-h5">IMDb Ratings</h5>
                 </div>
               </div>
             </div>

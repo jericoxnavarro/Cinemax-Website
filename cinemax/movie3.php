@@ -8,7 +8,17 @@
 <html data-wf-page="5e7092bf4210738e72e6094e" data-wf-site="5e7092bf421073025be60948">
 <head>
   <meta charset="utf-8">
-  <title>Movie3</title>
+  <?php
+    $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 3";
+    $movie1_result = mysqli_query($conn, $movie1_queery);
+    while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
+      $Titles[] = $movie1_rows['Title'];
+
+  ?>
+  <title><?php echo implode(",",$Titles); ?></title>
+  <?php
+      }
+    ?>
   <meta content="Movie3" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -33,7 +43,7 @@
           <nav role="navigation" class="w-nav-menu">
             <a href="index.php" class="navlinks w-nav-link">Home</a
             ><a href="movies.php" class="navlinks w-nav-link">Movies</a>
-            <a href="#" class="navlinks w-nav-link">Upcoming</a>
+            <a href="upcoming_movies.php" class="navlinks w-nav-link">Upcoming</a>
             <a href="#" class="navlinks w-nav-link">About Us</a>
           </nav>
           <div class="w-nav-button">

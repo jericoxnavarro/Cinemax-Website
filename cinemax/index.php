@@ -12,7 +12,7 @@ include_once("includes/db_connection.php");
 <html data-wf-page="5e7092bf4210733051e60949" data-wf-site="5e7092bf421073025be60948">
 <head>
   <meta charset="utf-8">
-  <title>Copy of Copy of CineMax</title>
+  <title>Cinemax</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@ include_once("includes/db_connection.php");
           <nav role="navigation" class="w-nav-menu">
             <a href="index.php" aria-current="page" class="navlinks w-nav-link w--current">Home</a>
             <a href="movies.php" class="navlinks w-nav-link">Movies</a>
-            <a href="aboutus.html" class="navlinks w-nav-link">Upcoming</a>
+            <a href="upcoming_movies.php" class="navlinks w-nav-link">Upcoming</a>
             <a href="#" class="navlinks w-nav-link">About Us</a>
           </nav>
           <div class="w-nav-button">

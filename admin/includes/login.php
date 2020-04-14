@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
     if($rows == 1){
         header("Location: ../dashboard.php"); // Redirecting to other page
     }else{
-        $error = "Username of Password is Invalid";
+        header("Location: ../index.php?INVALID");
     }
     mysqli_close($conn); // Closing connection
 }
