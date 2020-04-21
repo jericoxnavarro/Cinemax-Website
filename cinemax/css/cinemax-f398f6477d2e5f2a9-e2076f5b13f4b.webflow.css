@@ -2306,7 +2306,7 @@
   display: flex;
   width: 30%;
   height: 100%;
-  padding: 14px 22px;
+  padding: 60px 22px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2430,6 +2430,7 @@
 
 .text-field-3 {
   height: 30px;
+  width: 100px;
   margin-top: 2px;
   padding-top: 8px;
   padding-bottom: 9px;
