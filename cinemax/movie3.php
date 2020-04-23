@@ -36,7 +36,7 @@
   <div class="section-5">
     <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-1 w-nav">
       <div class="container-2 w-container">
-        <a href="#" class="brand w-nav-brand">
+        <a href="index.php" class="brand w-nav-brand">
           <h1 class="heading">CINEMAX</h1>
         </a>
         <div class="div-block-2">
@@ -44,7 +44,6 @@
             <a href="index.php" class="navlinks w-nav-link">Home</a
             ><a href="movies.php" class="navlinks w-nav-link">Movies</a>
             <a href="upcoming_movies.php" class="navlinks w-nav-link">Upcoming</a>
-            <a href="#" class="navlinks w-nav-link">About Us</a>
           </nav>
           <div class="w-nav-button">
             <div class="w-icon-nav-menu"></div>
@@ -106,7 +105,7 @@
                   <a href="#" class="btn-genre gen-3 w-button"><?php echo implode(",",$Genre3); ?></a>
                 </div>
                 <p class="movie-des"><?php echo implode(",",$Description); ?></p>
-                <div class="div-book"><a href="#" class="button w-button">Book Now!</a>
+                <div class="div-book"><a href="movie3-book.php" class="button w-button">Book Now!</a>
                   <h5 class="imbd-rating-h5">IMDb Ratings</h5>
                   <h1 class="rating"><?php echo implode(",",$Ratings); ?></h1>
                   <img src="images/star_48px_1star_48px.png" width="34" alt="">

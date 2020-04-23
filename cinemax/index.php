@@ -4,8 +4,6 @@ include_once("includes/db_connection.php");
 
 ?>
 
-
-
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Thu Mar 26 2020 10:11:09 GMT+0000 (Coordinated Universal Time)  -->
@@ -32,7 +30,7 @@ include_once("includes/db_connection.php");
   <div class="section1">
     <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-1 w-nav">
       <div class="container-2 w-container">
-        <a href="#" class="brand w-nav-brand">
+        <a href="index.php" class="brand w-nav-brand">
           <h1 class="heading">CINEMAX</h1>
         </a>
         <div class="div-block-2">
@@ -40,7 +38,6 @@ include_once("includes/db_connection.php");
             <a href="index.php" aria-current="page" class="navlinks w-nav-link w--current">Home</a>
             <a href="movies.php" class="navlinks w-nav-link">Movies</a>
             <a href="upcoming_movies.php" class="navlinks w-nav-link">Upcoming</a>
-            <a href="#" class="navlinks w-nav-link">About Us</a>
           </nav>
           <div class="w-nav-button">
             <div class="w-icon-nav-menu"></div>
@@ -91,7 +88,7 @@ include_once("includes/db_connection.php");
                 <img src="images/star_48px_1star_48px.png" width="34" alt="">
                 <h1 class="rating"><?php echo implode(",",$Ratings); ?></h1>
                 <h5 class="imbd-rating-h5">IMDb Ratings</h5>
-                <a href="movie1-book.html" class="button w-button">Book Now!</a>
+                <a href="movie1-book.php" class="button w-button">Book Now!</a>
               </div>
             </div>
           </div>
@@ -137,7 +134,7 @@ include_once("includes/db_connection.php");
               <div class="div-book"><img src="images/star_48px_1star_48px.png" width="34" alt="">
                 <h1 class="rating"><?php echo implode(",",$Ratings1); ?></h1>
                 <h5 class="imbd-rating-h5">IMDb Ratings</h5>
-                <a href="#" class="button w-button">Book Now!</a>
+                <a href="movie2-book.php" class="button w-button">Book Now!</a>
               </div>
             </div>
           </div>
@@ -184,7 +181,7 @@ include_once("includes/db_connection.php");
                 <img src="images/star_48px_1star_48px.png" width="34" alt="">
                 <h1 class="rating"><?php echo implode(",",$Ratings2); ?></h1>
                 <h5 class="imbd-rating-h5">IMDb Ratings</h5>
-                <a href="#" class="button w-button">Book Now!</a></div>
+                <a href="movie3-book.php" class="button w-button">Book Now!</a></div>
             </div>
           </div>
         </div>

@@ -19,6 +19,5 @@
     $sql = "INSERT INTO bookings (title,ticket_number,name,seat,email,number,date,time) VALUES 
     ('$title','$ticketid','$name','$seat','$email','$number','$date','$time')";
     mysqli_query($conn,$sql);
-    header("Location: movie1-book.php?Name=$name&Number=$number&Email=$email&SUCCESS");
-
+    header("Location: movie2-book.php?Name=$name&Number=$number&Email=$email&Ticket=$ticketid&SUCCESS");
 ?>

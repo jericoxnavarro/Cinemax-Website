@@ -311,8 +311,34 @@ input[type="reset"] {
 .w-form {
   max-width: 100%;
   max-height: 50%;
+  margin-bottom: 25px;
   
 }
+
+.ticket {
+  color: rgb(87, 243, 113);
+}
+
+#ticketnumber {
+  background-color: rgb(87, 243, 113);
+  height: 50px;
+  width: 230px;
+  border: 3px #21303b;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#thenumber {
+  font-size: 20px;
+  font-family: Condensed, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+
 .w-form-done {
   display: none;
   padding: 20px;
@@ -1782,3 +1808,4 @@ textarea.w-select {
 .w-condition-invisible {
   display: none !important;
 }
+

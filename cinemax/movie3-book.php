@@ -11,7 +11,7 @@
 <head>
   <meta charset="utf-8">
   <?php
-    $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
+    $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 3";
     $movie1_result = mysqli_query($conn, $movie1_queery);
     while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
       $Titles[] = $movie1_rows['Title'];
@@ -56,7 +56,7 @@
     </div>
     
     <?php
-      $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 1";
+      $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 3";
       $movie1_result = mysqli_query($conn, $movie1_queery);
  
       while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
@@ -455,7 +455,7 @@
                           <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                            <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                            <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -663,7 +663,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -871,7 +871,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -1126,7 +1126,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -1334,7 +1334,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -1542,7 +1542,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -1797,7 +1797,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -2005,7 +2005,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>
@@ -2213,7 +2213,7 @@
                         <h1 class="heading-13">Customer Details</h1>
                           
                           <div class="w-form">
-                          <form action="insert1-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
+                          <form action="insert3-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
                               <input type="text" class="text-field-3 w-input" maxlength="256" name="fullname" placeholder="Jerico Navarro" id="fullname" required="">
                               <label for="name-10" class="field-label-3">Phone Number</label>

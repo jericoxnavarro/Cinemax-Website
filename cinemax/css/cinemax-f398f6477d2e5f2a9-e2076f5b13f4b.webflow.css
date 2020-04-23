@@ -319,6 +319,14 @@
   text-align: left;
 }
 
+#success-messesage {
+  font-family: 'Open Sans', sans-serif;
+  color: #e5d6d6;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+}
+
 .grid {
   grid-template-areas: "." "Area";
   -ms-grid-columns: 0.25fr 1fr;
@@ -2299,6 +2307,14 @@
   align-items: center;
 }
 
+#heading-ticket {
+  visibility: hidden;
+}
+
+#ticketnumber {
+  visibility: hidden;
+}
+
 .div-block-32 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2306,7 +2322,7 @@
   display: flex;
   width: 30%;
   height: 100%;
-  padding: 60px 22px;
+  padding: 12px 22px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2329,7 +2345,7 @@
   margin-bottom: 0px;
   font-family: Oswald, sans-serif;
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 500;
 }
@@ -2424,20 +2440,20 @@
   margin-bottom: 0px;
   font-family: Roboto, sans-serif;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
 }
 
 .text-field-3 {
-  height: 30px;
-  width: 100px;
+  height: 40px;
+  width: 100%;
   margin-top: 2px;
   padding-top: 8px;
   padding-bottom: 9px;
   padding-left: 10px;
   border-style: none none solid;
   border-width: 1px 1px 1.5px;
-  border-color: #000 #000 #03213b;
+  border-color: #000 rgb(0, 0, 0) #ffa509;
   border-radius: 0px;
   background-color: transparent;
   font-family: Montserrat, sans-serif;

@@ -30,7 +30,7 @@
     <div class="opacity">
       <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-1 w-nav">
         <div class="container-2 w-container">
-          <a href="#" class="brand w-nav-brand">
+          <a href="index.php" class="brand w-nav-brand">
             <h1 class="heading">CINEMAX</h1>
           </a>
           <div class="div-block-2">
@@ -38,7 +38,6 @@
               <a href="index.php" class="navlinks w-nav-link">Home</a>
               <a href="movies.php" aria-current="page" class="navlinks w-nav-link w--current">Movies</a>
               <a href="upcoming_movies.php" class="navlinks w-nav-link">Upcoming</a>
-              <a href="#" class="navlinks w-nav-link">About Us</a>
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
