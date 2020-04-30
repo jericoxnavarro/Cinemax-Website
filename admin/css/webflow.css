@@ -311,7 +311,12 @@ input[type="reset"] {
   text-align: center;
   background-color: #dddddd;
 }
-
+.w-form-fail {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
+}
 label {
   display: block;
   margin-bottom: 5px;
@@ -1727,6 +1732,9 @@ textarea.w-select {
 }
 .w-tab-link.w--current {
   background-color: #C8C8C8;
+}
+.w-tab-link:focus {
+  outline: 0;
 }
 .w-tab-content {
   position: relative;
