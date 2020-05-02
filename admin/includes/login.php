@@ -20,7 +20,8 @@ if(isset($_POST['submit'])){
     if($rows == 1){
         header("Location: ../dashboard.php"); // Redirecting to other page
     }else{
-        header("Location: ../index.php?INVALID");
+        $status = "False";
+        header("Location: ../index.php?Status=$status");
     }
     mysqli_close($conn); // Closing connection
 }

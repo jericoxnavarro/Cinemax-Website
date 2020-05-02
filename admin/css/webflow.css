@@ -1580,6 +1580,7 @@ textarea.w-select {
 }
 .w-nav-link {
   position: relative;
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
