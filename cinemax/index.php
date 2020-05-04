@@ -66,7 +66,7 @@ include_once("includes/db_connection.php");
     <style type="text/css" media="screen">
 
       .slide.slide1 {
-        background-image: radial-gradient(circle farthest-corner at 100% 50%, #0c0835 31%, hsla(0, 100%, 0%, 0) 46%), url('images/mulan.jpg');
+        background-image: radial-gradient(circle farthest-corner at 100% 50%, #0c0835 31%, hsla(0, 100%, 0%, 0) 46%), url('<?php echo implode(",",$BG_image); ?>');
         background-position: left center;
         background-size: auto, contain;
         background-repeat: no-repeat;

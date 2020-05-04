@@ -36,7 +36,12 @@
       <div class="nav-div">
         <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
           <div class="container w-container">
-            <nav role="navigation" class="nav-menu w-nav-menu"><a href="dashboard.html" aria-current="page" class="nav-link dashboard w-nav-link w--current">Dashboard</a><a href="status.html" class="nav-link status w-nav-link">Status</a><a href="movies.html" class="nav-link movies w-nav-link">Movies</a><a href="bookings.html" class="nav-link booking w-nav-link">Booking</a></nav>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <a href="dashboard.php" aria-current="page" class="nav-link dashboard w-nav-link w--current">Dashboard</a>
+              <a href="status.php" class="nav-link status w-nav-link">Status</a>
+              <a href="movies.php" class="nav-link movies w-nav-link">Movies</a>
+              <a href="bookings.php" class="nav-link booking w-nav-link">Booking</a>
+            </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
             </div><a href="#" class="nav-link logout w-nav-link">Log out</a></div>

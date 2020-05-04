@@ -710,6 +710,9 @@
 }
 
 .nav-link.movies {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  font-size: 15px !important;
   padding-left: 50px;
   background-image: url('../images/cinema_60px_1cinema_60px.png');
   font-family: 'Open Sans Condensed', sans-serif;
@@ -796,8 +799,9 @@
 }
 
 .movies {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-size: 30px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-family: Condensed, sans-serif;
   color: snow;
 }
@@ -811,14 +815,17 @@
 }
 
 .heading-11 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
   font-family: Condensed, sans-serif;
   color: #fff;
 }
 
 .heading-11.bookings {
-  margin-top: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px !important;
 }
 
 .heading-12 {
@@ -1096,17 +1103,17 @@
 .heading-15._1 {
   margin-bottom: 0px;
   color: #272c33;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .heading-15._2 {
   color: #272c33;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .heading-15._3 {
   color: #272c33;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .change-btn {
@@ -2181,7 +2188,7 @@
   margin-bottom: 5px;
   font-family: Condensed, sans-serif;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .heading-23 {
