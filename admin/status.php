@@ -301,7 +301,7 @@
           </nav>
           <div class="w-nav-button">
             <div class="w-icon-nav-menu"></div>
-          </div><a href="#" class="nav-link logout w-nav-link">Log out</a></div>
+          </div><a href="index.php" class="nav-link logout w-nav-link">Log out</a></div>
       </div>
     </div>
   </div>

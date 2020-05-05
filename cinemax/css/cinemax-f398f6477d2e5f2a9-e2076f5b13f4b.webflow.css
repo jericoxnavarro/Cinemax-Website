@@ -22,7 +22,7 @@
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: black;
 }
 
 .container {
@@ -287,7 +287,7 @@
 }
 
 .movie-title {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   font-size: 55px;
@@ -362,8 +362,8 @@
 
 .btn-genre {
   min-width: 100px;
-  margin-right: 9px;
-  margin-left: 9px;
+  margin-right: 10px;
+  margin-left: 0px;
   border-radius: 20px;
   background-color: rgba(56, 152, 236, 0.43);
   font-family: Oswald, sans-serif;
@@ -388,6 +388,7 @@
 }
 
 .div-genre {
+  margin-top: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

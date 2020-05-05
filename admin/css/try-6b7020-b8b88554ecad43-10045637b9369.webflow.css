@@ -208,6 +208,26 @@
   font-weight: 700;
 }
 
+.ticketnumbertb {
+  background-color: #3b64d6;
+  padding-left: 0px;
+  color: #ffffff;
+}
+
+.seattb {
+  background-color: #f1953f;
+  color: #ffffff;
+}
+
+#Approved {
+  background-color: #7ee498;
+}
+
+#Declined {
+  background-color: #da5050;
+  color: #ffffff;
+}
+
 .submit-button:hover {
   background-color: #7ec990;
   -webkit-transform: scale(1.1);
@@ -713,6 +733,7 @@
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   font-size: 15px !important;
+  text-align: left !important;
   padding-left: 50px;
   background-image: url('../images/cinema_60px_1cinema_60px.png');
   font-family: 'Open Sans Condensed', sans-serif;
@@ -799,9 +820,12 @@
 }
 
 .movies {
-  font-size: 30px !important;
+  text-align: center;
+  font-size: 25x !important;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: Condensed, sans-serif;
   color: snow;
 }

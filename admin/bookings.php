@@ -52,7 +52,7 @@
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
-            </div><a href="#" class="nav-link logout w-nav-link">Log out</a></div>
+            </div><a href="index.php" class="nav-link logout w-nav-link">Log out</a></div>
         </div>
       </div>
     </div>
@@ -70,9 +70,52 @@
           <div class="tabs-content w-tab-content">
             <div data-w-tab="Tab 1" class="tab-pane-tab-1 w-tab-pane w--tab-active">
               <div class="div-block-25">
-                <h1 class="heading-18">Find Booking</h1>
                 <div class="table-for-find">
-                
+                  <div class="fresh-table toolbar-color-blue">
+  <!--
+    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
+    Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+  -->
+
+  <table id="fresh-table1" class="table">
+    <thead>
+      <th data-field="ticket">Ticket no.</th>
+      <th data-field="title">Movie</th>
+      <th data-field="name">Name</th>
+      <th data-field="seat">Seat</th>
+      <th data-field="date">Booked Date</th>
+      <th data-field="time">Booked Time</th>
+      <th data-field="bdate">Booking Date</th>
+      <th data-field="approve">Approve Bookings</th>
+
+  
+    </thead>
+    
+    <tbody>
+    <?php 
+      $movie1table = mysqli_query($conn, "SELECT * FROM bookings WHERE booking_status = '' ORDER BY id DESC;");
+      while($rows=mysqli_fetch_assoc($movie1table))
+      {
+    ?>
+      <tr>
+        <td class="ticketnumbertb"><?php echo $rows['ticket_number']; ?></td>
+        <td><?php echo $rows['title']; ?></td>
+        <td><?php echo $rows['name']; ?></td>
+        <td class="seattb"><?php echo $rows['seat']; ?></td>
+        <td><?php echo $rows['date']; ?></td>
+        <td><?php echo $rows['time']; ?></td>
+        <td><?php echo $rows['date_book']; ?></td>
+        <td>
+        <button onclick="accept(this.id)"  type="button" class="btn btn-success" id="<?php echo $rows['ticket_number']; ?>">Accept</button>
+        <button onclick="decline(this.id)"  type="button" class="btn btn-danger" id="<?php echo $rows['ticket_number']; ?>">Decline</button>
+        </td>
+      </tr>
+      <?php
+      }
+      ?>
+    </tbody>
+  </table>
+</div>
                 </div>
               </div>
             </div>
@@ -94,28 +137,28 @@
       <th data-field="date">Booked Date</th>
       <th data-field="time">Booked Time</th>
       <th data-field="bdate">Booking Date</th>
-      <th data-field="email">Email</th>
       <th data-field="number">Number</th>
+      <th data-field="status">Status</th>
 
   
     </thead>
     
     <tbody>
     <?php 
-      $movie1table = mysqli_query($conn, "SELECT * FROM bookings ORDER BY id DESC;");
+      $movie1table = mysqli_query($conn, "SELECT * FROM bookings  WHERE booking_status = 'Approved' OR booking_status = 'Declined' ORDER BY id DESC;");
       while($rows=mysqli_fetch_assoc($movie1table))
       {
     ?>
       <tr>
-        <td><?php echo $rows['ticket_number']; ?></td>
-        <td><?php echo $rows['title']; ?></td>
-        <td><?php echo $rows['name']; ?></td>
-        <td><?php echo $rows['seat']; ?></td>
-        <td><?php echo $rows['date']; ?></td>
-        <td><?php echo $rows['time']; ?></td>
-        <td><?php echo $rows['date_book']; ?></td>
-        <td><?php echo $rows['email']; ?></td>
-        <td><?php echo $rows['number']; ?></td>
+        <td class="ticketnumbertb"><?php echo $rows['ticket_number']; ?></td>
+        <td class="titletb"><?php echo $rows['title']; ?></td>
+        <td class="nametb"><?php echo $rows['name']; ?></td>
+        <td class="seattb"><?php echo $rows['seat']; ?></td>
+        <td class="datetb"><?php echo $rows['date']; ?></td>
+        <td class="timetb"><?php echo $rows['time']; ?></td>
+        <td class="booktb"><?php echo $rows['date_book']; ?></td>
+        <td class="numbertb"><?php echo $rows['number']; ?></td>
+        <td id="<?php echo $rows['booking_status']; ?>"><?php echo $rows['booking_status']; ?></td>
       </tr>
       <?php
       }
@@ -137,7 +180,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script>
+  function accept(clicked_id){
+    var accept = clicked_id;
+    window.location.href='approve.php?accept=' + accept;
+  }
 
+  function decline(clicked_id){
+    var decline = clicked_id;
+    window.location.href='decline.php?decline=' + decline;
+  }
+</script>
 <script type="text/javascript">
   var $table = $('.table')
   var $alertBtn = $('#alertBtn')

@@ -12,7 +12,7 @@
 <html data-wf-page="5eaa311216b9f08fbe20406d" data-wf-site="5eaa311216b9f050fa20406b">
 <head>
   <meta charset="utf-8">
-  <title>movies</title>
+  <title>Movies</title>
   <meta content="movies" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -49,7 +49,7 @@
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
-            </div><a href="#" class="nav-link logout w-nav-link">Log out</a></div>
+            </div><a href="index.php" class="nav-link logout w-nav-link">Log out</a></div>
         </div>
       </div>
     </div>

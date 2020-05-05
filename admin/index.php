@@ -7,7 +7,7 @@ include_once("includes/login.php");
 <html data-wf-page="5eaa311216b9f038b7204069" data-wf-site="5eaa311216b9f050fa20406b">
 <head>
   <meta charset="utf-8">
-  <title>admin</title>
+  <title>Cinemax Admin</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">

@@ -113,6 +113,7 @@
   width: 30px;
 }
 .bootstrap-table .fixed-table-container .table thead th .th-inner {
+  padding-left: 0px !important;
   padding: 0.75rem;
   vertical-align: bottom;
   overflow: hidden;
@@ -488,12 +489,13 @@ input[type=file] > input[type=button]::-moz-focus-inner {
 }
 
 .btn {
+  padding-top: 5px;
   border-width: 2px;
   background-color: transparent;
-  font-weight: 600;
+  text-align: center;
+  font-size: 9px;
   opacity: 0.7;
   filter: alpha(opacity=70);
-  padding: 8px 16px;
   border-color: #AAAAAA;
   color: #AAAAAA;
 }
@@ -537,6 +539,8 @@ input[type=file] > input[type=button]::-moz-focus-inner {
 }
 
 .btn-primary {
+  height: 25px;
+  width:  auto;
   border-color: #3472F7;
   color: #3472F7;
 }
@@ -567,8 +571,12 @@ input[type=file] > input[type=button]::-moz-focus-inner {
 }
 
 .btn-success {
+  text-align: center;
+  height: 25px;
+  width: auto;
+  background-color: #05AE0E !important;
   border-color: #05AE0E;
-  color: #05AE0E;
+  color: rgb(255, 255, 255);
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   background-color: transparent;
@@ -657,8 +665,11 @@ input[type=file] > input[type=button]::-moz-focus-inner {
 }
 
 .btn-danger {
+  height: 25px;
+  width: auto;
+  background-color: #FF3B30;
   border-color: #FF3B30;
-  color: #FF3B30;
+  color: rgb(255, 255, 255);
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
   background-color: transparent;
@@ -670,14 +681,14 @@ input[type=file] > input[type=button]::-moz-focus-inner {
   border-color: #FF3B30;
 }
 .btn-danger.btn-fill {
-  color: #FFFFFF;
+  color: #EE2D20;
   background-color: #FF3B30;
   opacity: 1;
   filter: alpha(opacity=100);
 }
 .btn-danger.btn-fill:hover, .btn-danger.btn-fill:focus, .btn-danger.btn-fill:active, .btn-danger.btn-fill.active, .open > .btn-danger.btn-fill.dropdown-toggle {
   background-color: #EE2D20;
-  color: #FFFFFF;
+  color: #EE2D20;
 }
 .btn-danger.btn-fill .caret {
   border-top-color: #FFFFFF;

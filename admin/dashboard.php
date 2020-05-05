@@ -44,7 +44,7 @@
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
-            </div><a href="#" class="nav-link logout w-nav-link">Log out</a></div>
+            </div><a href="index.php" class="nav-link logout w-nav-link">Log out</a></div>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
         <div class="div _2"><img src="images/new_ticket_52px_1new_ticket_52px.png" width="55" alt="">
           <h2 class="heading-11 bookings">Total Bookings</h2>
           <?php 
-            $totalbookings = mysqli_query($conn, "SELECT count(*) as total from bookings");
+            $totalbookings = mysqli_query($conn, "SELECT count(*) as total from bookings WHERE title = ".'"'.$moviet['Title'].'"');
             $tbookings = mysqli_fetch_assoc($totalbookings);
           ?>
           <h1 class="heading-13"> <?php echo $tbookings['total']; ?> Bookings</h1>
@@ -77,7 +77,7 @@
         </div>
         <div class="div _4"><img src="images/team_60px_1team_60px.png" width="60" alt="">
           <?php 
-            $totaluser = mysqli_query($conn, "SELECT COUNT(DISTINCT email) as total FROM bookings");
+            $totaluser = mysqli_query($conn, "SELECT COUNT(DISTINCT email) as total FROM bookings WHERE title = ".'"'.$moviet['Title'].'"');
             $tuser = mysqli_fetch_assoc($totaluser);
           ?>
           <h2 class="heading-11 users">Total Users</h2>
@@ -92,7 +92,7 @@
             $bookingstodays = mysqli_query($conn, $querys1.'"'.$date_today.'"'.' AND date = '.'"'.$date_today.'"');
             $bookingsts = mysqli_fetch_assoc($bookingstodays);
           ?>
-          <h2 class="movies">Available Seats</h2>
+          <h2 class="movies" style="font-size:25px">Available Seats Today</h2>
           <h1 class="totalmovie"><?php echo 3870-$bookingsts['total']; ?> Seats</h1>
         </div>
         <div class="div _2"><img src="images/new_ticket_52px_1new_ticket_52px.png" width="55" alt="">
