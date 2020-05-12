@@ -54,11 +54,11 @@
         </div>
       </div>
     </div>
-    
+
     <?php
       $movie1_queery = "SELECT * FROM movies WHERE Movie_ID = 2";
       $movie1_result = mysqli_query($conn, $movie1_queery);
- 
+
       while($movie1_rows = mysqli_fetch_assoc($movie1_result)){
         $Title[] = $movie1_rows['Title'];
         $Genre1[] = $movie1_rows['Genre1'];
@@ -170,13 +170,13 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
-    </style>    
-    
+    </style>
+
     <div class="div-block-20">
       <div class="div-book-mainpic">
         <div class="opacity book">
           <div class="div-thumb-book">
-            <img src="<?php echo implode(",",$Thumbnail); ?>" 
+            <img src="<?php echo implode(",",$Thumbnail); ?>"
               sizes="(max-width: 479px) 100vw, (max-width: 991px) 28vw, 250px" alt="" class="movie1pic-book">
           </div>
           <div class="div-content slide1">
@@ -205,9 +205,9 @@
                 var list = document.getElementsByClassName('date-selected');
                   for (var n = 0; n < list.length; ++n) {
                     list[n].value="<?php echo implode(",",$Date1); ?>";
-                  } 
+                  }
               });
-            </script>   
+            </script>
               <div class="month btn1"><?php echo $Month1; ?></div>
               <div class="day btn1"><?php echo $Day1; ?></div>
               <div class="days btn1"><?php echo $Year1; ?></div>
@@ -219,9 +219,9 @@
                 var list = document.getElementsByClassName('date-selected');
                   for (var n = 0; n < list.length; ++n) {
                     list[n].value="<?php echo implode(",",$Date2); ?>";
-                  } 
+                  }
               });
-            </script>  
+            </script>
               <div class="month btn2"><?php echo $Month2; ?></div>
               <div class="day btn2"><?php echo $Day2; ?></div>
               <div class="days btn2"><?php echo $Year2; ?></div>
@@ -233,9 +233,9 @@
                 var list = document.getElementsByClassName('date-selected');
                   for (var n = 0; n < list.length; ++n) {
                     list[n].value="<?php echo implode(",",$Date3); ?>";
-                  }  
+                  }
               });
-            </script>   
+            </script>
             <div class="month btn3"><?php echo $Month3; ?></div>
               <div class="day btn3"><?php echo $Day3; ?></div>
               <div class="days btn3"><?php echo $Year3; ?></div>
@@ -248,39 +248,39 @@
                   <a onclick="changeseat(this.id)" id="time1-date1" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time1-date1").addEventListener("click", () => {
-                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      console.log("<?php echo "9:30 AM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="9:30 AM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time2-date1" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time2-date1").addEventListener("click", () => {
-                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      console.log("<?php echo "12:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="12:30 PM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time3-date1" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link w--current">
                   <script>
                     document.getElementById("time3-date1").addEventListener("click", () => {
-                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      console.log("<?php echo "3:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="3:30 PM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
@@ -448,12 +448,12 @@
                               <img onclick="changeseat(this.id)" src="images/Path-34_1Path-34.png" id="G16" width="19" alt="" class="perseats G16">
                               <img onclick="changeseat(this.id)" src="images/Path-34_1Path-34.png" id="G17" width="19" alt="" class="perseats G17">
                             </div>
-                          
+
                           </div>
                         </div>
                         <div class="div-block-32">
                           <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                             <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -467,7 +467,7 @@
                               <input hidden type="text" name="seat" id="seat" class="seats-selected">
                               <input hidden type="text" name="ticket" id="ticket" value="<?php echo $TicketID; ?>">
                               <input hidden type="text" name="title" id="title" value="<?php echo implode(",",$Title); ?>">
-                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">  
+                              <input type="submit" value="Reserve Now" data-wait="Please wait..." class="submit-button-2 w-button">
                             </form>
                           </div>
                           <?php
@@ -661,7 +661,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -869,7 +869,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -923,39 +923,39 @@
                   <a onclick="changeseat(this.id)" id="time1-date2" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link w--current">
                   <script>
                     document.getElementById("time1-date2").addEventListener("click", () => {
-                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      console.log("<?php echo "9:30 AM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="9:30 AM";
                       }
                     });
-                  </script>  
+                  </script>
                   <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time2-date2" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time2-date2").addEventListener("click", () => {
-                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      console.log("<?php echo "12:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="12:30 PM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
                   <a onclick="changeseat(this.id)" id="time3-date2" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time3-date2").addEventListener("click", () => {
-                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      console.log("<?php echo "3:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="3:30 PM";
                       }
                     });
-                  </script>  
+                  </script>
                     <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
@@ -1124,7 +1124,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -1332,7 +1332,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -1540,7 +1540,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -1594,39 +1594,39 @@
                   <a onclick="changeseat(this.id)" id="time1-date3" data-w-tab="Tab 1" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time1-date3").addEventListener("click", () => {
-                      console.log("<?php echo "9:30 AM"; ?>"); 
+                      console.log("<?php echo "9:30 AM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="9:30 AM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">9:30</div>
                     <div class="wtime">AM</div>
                   </a>
                   <a onclick="changeseat(this.id);" id="time2-date3" data-w-tab="Tab 2" class="time-tablink w-inline-block w-tab-link">
                   <script>
                     document.getElementById("time2-date3").addEventListener("click", () => {
-                      console.log("<?php echo "12:30 PM"; ?>"); 
+                      console.log("<?php echo "12:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="12:30 PM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">12:30</div>
                     <div class="wtime">PM</div>
                   </a>
                   <a onclick="changeseat(this.id);" id="time3-date3" data-w-tab="Tab 3" class="time-tablink w-inline-block w-tab-link w--current">
                   <script>
                     document.getElementById("time3-date3").addEventListener("click", () => {
-                      console.log("<?php echo "3:30 PM"; ?>"); 
+                      console.log("<?php echo "3:30 PM"; ?>");
                       var list = document.getElementsByClassName('time-selected');
                       for (var n = 0; n < list.length; ++n) {
                         list[n].value="3:30 PM";
                       }
                     });
-                  </script>    
+                  </script>
                   <div class="time">3:30</div>
                     <div class="wtime">PM</div>
                   </a>
@@ -1795,7 +1795,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -2003,7 +2003,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -2211,7 +2211,7 @@
                         </div>
                         <div class="div-block-32">
                         <h1 class="heading-13">Customer Details</h1>
-                          
+
                           <div class="w-form">
                           <form action="insert2-bookings.php" method="post" id="email-form" name="email-form" data-name="Email Form" class="form-3">
                               <label for="name-9" class="field-label-3">Name</label>
@@ -2266,7 +2266,7 @@
   </div>
   <div class="section-7"></div>
   <script>
-    var CSeat = "";  
+    var CSeat = "";
 function changeseat(clicked_id) {
   var hh = clicked_id;
   CSeat = hh+"";
@@ -2300,9 +2300,13 @@ function changeseat(clicked_id) {
     $seat_result = mysqli_query($conn, $seat_queery1);
     while($seat_rows = mysqli_fetch_array($seat_result)){
       $SeatsSold[] = $seat_rows['seat'];
-      foreach($SeatsSold as $seatsold) {?>
+      foreach($SeatsSold as $seatsold) {
+        if ($seatsold=='none'){
+        }else{
+        ?>
         document.getElementById("<?php echo $seatsold; ?>").src = "images/Path-35_1Path-35.png";
         document.getElementById('<?php echo $seatsold; ?>').style.pointerEvents = 'none';<?php
+        }
       }
     }
     ?>

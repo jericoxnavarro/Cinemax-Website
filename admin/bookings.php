@@ -1,10 +1,11 @@
-<?php 
+<?php
   $servername = "localhost";
   $username = "root";
   $password = "";
   $db_name = "cinemax";
   $conn = mysqli_connect($servername,$username,$password);
   mysqli_select_db($conn, $db_name);
+
 ?>
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
@@ -88,11 +89,11 @@
       <th data-field="bdate">Booking Date</th>
       <th data-field="approve">Approve Bookings</th>
 
-  
+
     </thead>
-    
+
     <tbody>
-    <?php 
+    <?php
       $movie1table = mysqli_query($conn, "SELECT * FROM bookings WHERE booking_status = '' ORDER BY id DESC;");
       while($rows=mysqli_fetch_assoc($movie1table))
       {
@@ -140,11 +141,11 @@
       <th data-field="number">Number</th>
       <th data-field="status">Status</th>
 
-  
+
     </thead>
-    
+
     <tbody>
-    <?php 
+    <?php
       $movie1table = mysqli_query($conn, "SELECT * FROM bookings  WHERE booking_status = 'Approved' OR booking_status = 'Declined' ORDER BY id DESC;");
       while($rows=mysqli_fetch_assoc($movie1table))
       {
