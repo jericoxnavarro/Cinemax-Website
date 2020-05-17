@@ -1,12 +1,8 @@
 # Cinemax Webpage
-> This website is a cinema reservation system.
+> This project is our requirement in our programming class.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-This project is made for my project in my programming class.
-The project is a cinemax reservation system that allows the user to choose movie, date, time and seat that he/she wants. 
+The project is a cinema reservation system that allows the user to choose movie, date, time, and seat that he/she wants. 
+The project is just a simple cinema reservation but I can add more features in the future.
 
 ![](images/use_for_readme.JPG)
 
